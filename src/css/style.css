@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* header{
+    
+} */
+*{
+    font-family: 'Silkscreen', Arial, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;  
+    padding: 0;
+}
+body{
+    background-color: rgb(122, 123, 122);
+    
+    
+}
+
+#container{
+    width: 1235px;
+    height: 615px;
+    border: 1px solid black;
+    position: relative;
+    margin: 10px auto;   
+    border-radius: 10px; 
+    background-color: rgb(33, 34, 77);
+}
+
+/* .row{
+    position: relative;
+    margin-left: 3vw;
+    display: flex;
+    
+} */
+
+.card_box{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    cursor: grab;   
+    border-radius: 10px;
+    perspective: 600px;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 0.75s;
+    backface-visibility: hidden;
+}
+
+.back{
+    background: url(../imagens/verso.png);
+    
+}
+.back.flipped{
+    transform: rotateY(180deg);
+}
+.front{
+    
+    transform: rotateY(-180deg);
+}
+.front.flipped{
+    transform: rotateY(0deg);
+}
+.card_box:hover{
+    box-shadow: 0 0 10px rgb(0 255 161);
+}
+.face.flipped.match{
+    box-shadow: 0 0 10px rgb(255, 247, 0);
+}
+
+#modalGameOver{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 108%;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-self: center;
+    z-index: -2;
+}
+    
+#imgGameOver{
+    margin-top: 30vh;
+    cursor: pointer;
+}
+#imgMatchSign{
+    position: relative;
+    top: 30VH ;
+    transition-property: top, opacity;
+    transition-duration: 1.5s;
+    opacity: 1;
+    z-index: -1;
+}
